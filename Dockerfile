@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-MAINTAINER Nikola Stankovic "https://github.com/nikolastankovic"
+LABEL maintainer="technical@viascom.ch"
 
 ENV JAVA_VERSION_MAJOR=8
 ENV JAVA_VERSION_MINOR=162
@@ -13,7 +13,6 @@ ENV GLIBC_REPO=https://github.com/sgerrand/alpine-pkg-glibc
 ENV GLIBC_VERSION=2.26-r0
 ENV LANG en_US.UTF-8
 
-# do all in one step
 RUN set -ex && \
     apk upgrade --update && \
     apk add --update libstdc++ curl ca-certificates bash java-cacerts && \
